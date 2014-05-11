@@ -1,3 +1,5 @@
+[![Build Status](https://drone.io/github.com/mplacona/giphy/status.png)](https://drone.io/github.com/mplacona/giphy/latest)
+
 # Giphy API Dart Wrapper
 ---
 
