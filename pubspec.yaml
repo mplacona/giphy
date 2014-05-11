@@ -1,0 +1,8 @@
+name: giphy
+version: 0.1.0
+author: Marcos Placona
+description: An implementation of the Giphy API for Dart
+dependencies:
+  http: any
+  json: any
+  unittest: any
