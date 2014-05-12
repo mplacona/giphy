@@ -26,4 +26,4 @@ The following JSON endpoints are currently supported:
 + search [Giphy's document](https://github.com/giphy/GiphyAPI#search-endpoint)
 + translate [Giphy's document](https://github.com/giphy/GiphyAPI#translate-endpoint)
 + random [Giphy's document](https://github.com/giphy/GiphyAPI#random-endpoint)
-+ trending [https://github.com/giphy/GiphyAPI#trending-gifs-endpoint)
++ trending [Giphy's document](https://github.com/giphy/GiphyAPI#trending-gifs-endpoint)
