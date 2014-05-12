@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Giphy : A Dart wrapper for Giphy&#39;s API" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Giphy</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mplacona/giphy">View on GitHub</a>
+
+          <h1 id="project_title">Giphy</h1>
+          <h2 id="project_tagline">A Dart wrapper for Giphy&#39;s API</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/mplacona/giphy/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/mplacona/giphy/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><a href="https://drone.io/github.com/mplacona/giphy/latest"><img src="https://drone.io/github.com/mplacona/giphy/status.png" alt="Build Status"></a></p>
+
+<h1>
+<a name="giphy-api-dart-wrapper" class="anchor" href="#giphy-api-dart-wrapper"><span class="octicon octicon-link"></span></a>Giphy API Dart Wrapper</h1>
+
+<hr><p>This is a wrapper to the Giphy API for Dart. It let's you use Giphy's API in your projects to load up amazong gifs. Who doesn;t like cat's gifs then?</p>
+
+<h2>
+<a name="access-and-api-keys" class="anchor" href="#access-and-api-keys"><span class="octicon octicon-link"></span></a>Access and API Keys</h2>
+
+<p>The Giphy API is open to the public. They have instituted a simple, single public beta key system to let anyone try it out. The API key is required for all endpoints. <b>The public beta key is "dc6zaTOxFJmzC"</b>.  Please use this key while you develop your application and experiment with your integrations.</p>
+
+<p>Once you are ready to use the Giphy API in production, please contact <a href="mailto:api@giphy.com">api@giphy.com</a> to request a unique API key. In your email please provide the following information:</p>
+
+<ul>
+<li>The app name with brief description, web / app store links, etc.</li>
+<li>What is the 'live date' of the app or feature that integrates with the API?</li>
+<li>As per Giphy's section 5 A of their <a href="http://giphy.com/terms">terms</a>, they require all apps that use the Giphy API to conspicuously display "Powered By Giphy" attribution marks. You can find approved <a href="http://giphymedia.s3.amazonaws.com/giphy-api-icons.zip">official logo marks here</a>. Please be sure to include a screen shot of your app that includes the attribution.</li>
+</ul><p><b>Note: the public key is subject to rate limit constraints. Giphy do not encourage live production deployments to use the public key.</b></p>
+
+<h2>
+<a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h2>
+
+<p>The following JSON endpoints are currently supported:</p>
+
+<ul>
+<li>search <a href="https://github.com/giphy/GiphyAPI#search-endpoint">Giphy's document</a>
+</li>
+<li>translate <a href="https://github.com/giphy/GiphyAPI#translate-endpoint">Giphy's document</a>
+</li>
+<li>random <a href="https://github.com/giphy/GiphyAPI#random-endpoint">Giphy's document</a>
+</li>
+<li>trending <a href="https://github.com/giphy/GiphyAPI#trending-gifs-endpoint">Giphy's document</a>
+</li>
+</ul><h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-dart"><pre>
+<span class="k">import</span> <span class="s1">'package:giphy/giphy.dart'</span><span class="p">;</span>
+
+<span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Giphy</span> <span class="n">giphy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Giphy</span><span class="p">(</span><span class="s2">"dc6zaTOxFJmzC"</span><span class="p">);</span>
+    <span class="n">giphy</span><span class="p">.</span><span class="n">trending</span><span class="p">()</span>
+        <span class="p">.</span><span class="n">then</span><span class="p">((</span><span class="n">value</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">print</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="p">.</span><span class="n">catchError</span><span class="p">((</span><span class="n">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">print</span><span class="p">(</span><span class="n">error</span><span class="p">.</span><span class="n">toString</span><span class="p">()));</span>
+<span class="p">}</span>
+</pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Giphy maintained by <a href="https://github.com/mplacona">mplacona</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
