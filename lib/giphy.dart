@@ -32,7 +32,7 @@ class Giphy {
     }
     
     Future _apiRequest(String method, Map<String, String> parameters) {
-        return http.get(_buildUri(method, parameters).toString());
+        return http.get(_buildUri(method, parameters).toString()).then((response) => response.body);
     }
     
     Uri _buildUri(String method, Map<String, String> queryParameters){
