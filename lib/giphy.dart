@@ -3,31 +3,32 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 
 class Giphy {
-    final baseUri = "api.giphy.com/v1/gifs";
-    String apiKey;
-    Map<String, String> parameters;
+    final _baseUri = "api.giphy.com/v1/gifs";
+    Map<String, String> _parameters;
+    String _apiKey;
+    
 
-    Giphy(this.apiKey){
-        parameters = {'api_key' : this.apiKey};
+    Giphy(this._apiKey){
+        _parameters = {'api_key' : this._apiKey};
     }
     
     Future search(String query){
-        parameters['q'] = query;
-        return _apiRequest('search', parameters).then((msg) => msg);
+        _parameters['q'] = query;
+        return _apiRequest('search', _parameters).then((msg) => msg);
     }
     
     Future translate(String s) {
-        parameters['s'] = s;
-        return _apiRequest('translate', parameters).then((msg) => msg);
+        _parameters['s'] = s;
+        return _apiRequest('translate', _parameters).then((msg) => msg);
     }
     
     Future random(String tag) {
-        parameters['tag'] = tag;
-        return _apiRequest('random', parameters).then((msg) => msg);
+        _parameters['tag'] = tag;
+        return _apiRequest('random', _parameters).then((msg) => msg);
     }
     
     Future trending() {
-        return _apiRequest('trending', parameters).then((msg) => msg);
+        return _apiRequest('trending', _parameters).then((msg) => msg);
     }
     
     Future _apiRequest(String method, Map<String, String> parameters) {
@@ -35,17 +36,7 @@ class Giphy {
     }
     
     Uri _buildUri(String method, Map<String, String> queryParameters){
-        var uri = new Uri.http(baseUri, method, queryParameters);
+        var uri = new Uri.http(_baseUri, method, queryParameters);
         return uri;
-    }
-  
-    String _processResults(http.Response value) {
-        return value.body;
-    }
-  
-    _handleError(Error error){
-        print('hjhj');
-    }
-  
-  
+    }  
 }

@@ -13,11 +13,6 @@ void main() {
             var giphy = new Giphy(key);
             expect(giphy is Giphy, isTrue);
         });
-
-        test("Set value for API Key", () {
-            var giphy = new Giphy(key);
-            expect(giphy.apiKey, equals(key));
-        });
     });
 
     group('Endpoint => ', () {
