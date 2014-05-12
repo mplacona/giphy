@@ -28,7 +28,7 @@ void main() {
         group('Search :: ', () {
             test("Returns valid JSON", () {
                 future = giphy.search('somethingthatitwillneverfind');
-                expect(future.then((value) => value), completion(equals(JSON.encode(successfull_response))));
+                expect(future.then((value) => value), completion(equals(JSON.encode(successfull_response_paginated))));
             });
 
             test("Returns failure <<400>>", () {
@@ -41,7 +41,7 @@ void main() {
         group('Translate :: ', () {
             test("Returns valid JSON", () {
                 future = giphy.translate('something that it will never find 0909090');
-                expect(future.then((value) => value), completion(equals(JSON.encode(successfull_response))));
+                expect(future.then((value) => value), completion(equals(JSON.encode(successful_response))));
             });
 
             test("Returns failure <<400>>", () {
@@ -54,7 +54,7 @@ void main() {
         group('Random :: ', () {
             test("Returns valid JSON", () {
                 future = giphy.random('somethingthatitwillneverfind');
-                expect(future.then((value) => value), completion(equals(JSON.encode(successfull_response))));
+                expect(future.then((value) => value), completion(equals(JSON.encode(successful_response))));
             });
 
             test("Returns failure <<400>>", () {

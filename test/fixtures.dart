@@ -1,4 +1,12 @@
-var successfull_response = {
+var successful_response = {
+    "data": [],
+    "meta": {
+        "status": 200,
+        "msg": "OK"
+    }
+};
+
+var successfull_response_paginated = {
     "data": [],
     "pagination": {
         "total_count": 0,
