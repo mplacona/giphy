@@ -3,7 +3,7 @@
 # Giphy API Dart Wrapper
 ---
 
-This is a wrapper to the Giphy API for Dart. It let's you use Giphy's API in your projects to load up amazong gifs. Who doesn;t like cat's gifs then?
+This is a wrapper to the Giphy API for Dart. It let's you use Giphy's API in your projects to load up amazing gifs. Who doesn't like cat's gifs then?
 
 ## Access and API Keys
 
